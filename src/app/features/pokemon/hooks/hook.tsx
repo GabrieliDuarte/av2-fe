@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { cargo } from "../services/position.service";
-export function useRegisterCargo() {
-return useQuery({
- queryKey: ["cargoFuncionario"],
- queryFn: cargo,
- });
+import { getPokemons } from "../api/api.tsx";
+
+export function PokemonList() {
+  return useQuery({
+    queryKey: ["pokemons"],
+    queryFn: getPokemons,
+  });
 }
+
